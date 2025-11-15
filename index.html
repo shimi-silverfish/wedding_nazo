@@ -1,13 +1,43 @@
+﻿<!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <title>�䃊���N�W</title>
+    <title>謎リンク集</title>
+    <style>
+      #links {
+        display: none; /* 初期は非表示 */
+      }
+    </style>
+
+    <script>
+      function unlock() {
+        const input = prompt("パスワードを入力してください！");
+        
+        // ★ パスワード設定（好きに変えてOK）
+        const correctPassword = "secret";
+
+        if (input === correctPassword) {
+          document.getElementById("links").style.display = "block";
+          alert("解除成功！リンクが表示されました！");
+        } else {
+          alert("パスワードが違います！");
+        }
+      }
+    </script>
   </head>
+
   <body>
-<h1 class="title">�����N�W</h1><br>
-<a href="nazo1.html">��P�̓�</a><br>
-<a href="nazo2.html">��Q�̓�</a><br>
-<a href="nazo3.html">��R�̓�</a><br>
-<a href="nazo4.html">Congraturation</a><br>
+    <h1 class="title">リンク集</h1><br>
+
+    <!-- ▼ パスワード解除ボタン -->
+    <button onclick="unlock()">開く</button>
+
+    <!-- ▼ パスワード解除後に表示される領域 -->
+    <div id="links">
+      <a href="nazo1.html">第１の謎</a><br>
+      <a href="nazo2.html">第２の謎</a><br>
+      <a href="nazo3.html">第３の謎</a><br>
+      <a href="nazo4.html">Congraturation</a><br>
+    </div>
   </body>
 </html>
